@@ -12,6 +12,7 @@ usando el método.push().
 Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.
     */
 
+
 let amigos =[];
 
 function agregarAmigo(){
@@ -24,6 +25,7 @@ function agregarAmigo(){
     console.log("amigos agreagado " +amigo); 
     console.log(amigos);
    }
+   elementoLi();
 }
 agregarAmigo();
 
@@ -33,7 +35,9 @@ function sortearAmigo (){
     if (amigos.leght==""){//Validar que haya amigos disponibles
             agregarAmigo();
         }else{
-            let numeroAleatorio= (Math.floor(Math.random(amigos.lenght)*amigos.length)+1); //Generar un índice aleatorio
+                
+            let numeroAleatorio= (Math.floor(Math.random(amigos.lenght)*amigos.length)); //Generar un índice aleatorio
+                    
             console.log("indice sorteado " +numeroAleatorio);
             amigoSorteado = amigos[numeroAleatorio];// obtener el nombre en el arreglo
             
@@ -44,4 +48,19 @@ function sortearAmigo (){
 function mostrarResultado(elemento,texto){
     let resultado=document.getElementById("resultado");
     resultado.innerHTML=`El amigo sorteado es ${amigoSorteado}`
+}
+
+
+   
+
+function elementoLi(){
+    let lista = document.getElementById(`listaAmigos`);//obtener el elemento de la lista
+    lista.innerHTML=""; //Limpiar la lista existente
+
+    for (let i=0; i<=amigos.length;i++){ //Iterar sobre el arreglo:
+        let list =document.createElement(`li`);
+        list.textContent=amigos[i]; //asignaTexto amigo
+        lista.appendChild(list); //agregar elementos a la lista
+    }
+
 }
