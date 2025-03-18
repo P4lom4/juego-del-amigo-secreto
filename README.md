@@ -1,5 +1,5 @@
 
-![imagen](https://pasteboard.co/v3kMLDpWodVX.png)
+![portada](https://raw.githubusercontent.com/P4lom4/juego-del-amigo-secreto/refs/heads/main/portda.png))
 
 JUEGO DEL AMIGO SECRETO. -  PROYECTO EN CURSO -
 
